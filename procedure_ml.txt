@@ -1,0 +1,50 @@
+ Les étapes d'un projet de Machine Learning
+ 
+ 
+ 
+ 1 Définir l'objectif du projet  
+ 
+ 
+ 2 Partie exploratoire  
+ - Observer la structure des données
+ - Voir les noms et les types de variables
+ - Voir les données manquantes (par ligne et par colonne) et les analyser   
+ - Voir les valeurs uniques  
+ - Voir les statistiques descriptives des variables (features et du target)
+ - Identifier les features et le target
+ - Observer graphiquement les dstribution des variables (features et du target)
+ - Observer graphqiuement les relations entre les variables (features et du target)
+ - Observer graphiquement les relation entre les features et le target
+ - Voir les corrélations enre les variables 
+ - Identifier les outliers 
+ - Eventuellement, faire quelques tests statistiques par rapport aux relations précédemment observées  
+ 
+ 
+ 3 Faire un split tain-test (avec ou sans stratification)
+ 
+ 
+ 4 Pré-traitement des données uniquement sur le train set (utiliser le test-set peut biaser notre modèle)
+ - Supprimer les features qui n'apporte pas des informations pertinantes et/ou céer des nouevelles 
+   features si besoin (e.g., à l'aide du PCA et/ou à partir d'autres features)
+ - Supprimer/remplacer/prédir les valeurs manquantes (par lignes/colonnes)
+ - Tranformer les données quantitatives (e.g., standardisation, normalisation) 
+ - Recoder les données qualitatives (e.g., onehot encoder, ordinal encoder)
+     
+ 
+ 5 Création, entraînement et amélioration d'un modèle de machin learning 
+ - Choisir un système d'évaluation et une/des métric(s) fiable(s) (comparer aussi un modèle naif)
+ - Prendre uniquement le train-set
+ - Choisir un modèle et le fiter sur notre train set, puis tester différents hyperparamètres aves une 
+   cross validation. Après répéter cette procédure sur d'autres modèles... 
+ - ... Ou à l'aide de gridsearch tester différents modèles et différents hyperparamètres en même temps
+ - Analyser les erreurs du/des modèle(s) et retourner aux étapes précédentes pour améliorer si besoin 
+ - Tracer une learning curve pour vérifier l'overfitting et l'underfitting et la quantité de données 
+ - Validation curve 
+ 
+ 
+ 6 Tester le modèle 
+ - Choisir le meilleurs modèle avec les meilleurs hyperparamètres et l'évaluer sur le test-set 
+ 
+ 
+ 7 Déploiement du modèle 
+ 
